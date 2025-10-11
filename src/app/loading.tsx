@@ -24,7 +24,7 @@ export default function Loading() {
                 position: "fixed",
                 inset: 0,
                 zIndex: 9999,
-                background: "rgba(255,255,255,0.95)",
+                background: "rgba(255,255,255,1)",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
