@@ -7,7 +7,11 @@ const bgImage = "/assets/china-bg.webp";
 const cloudImage1 = "/assets/clouds1.webp";
 const fgImage = "/assets/china-fg.webp";
 
-export default function Hero() {
+type HeroProps = {
+    setLoading: (loading: boolean) => void;
+};
+
+export default function Hero({ setLoading }: HeroProps) {
     const containerRef = useRef<HTMLDivElement>(null);
     const fgRef = useRef<HTMLDivElement>(null);
     const bgRef = useRef<HTMLDivElement>(null);
@@ -84,6 +88,7 @@ export default function Hero() {
                             filter: "blur(0px)",
                         }}
                         priority
+                        onLoad={() => setLoading(false)}
                     />
                 </div>
                 <div className="absolute inset-0 z-40 w-full h-full">

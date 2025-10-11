@@ -1,6 +1,23 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import gsap from "gsap";
 
 export default function Loading() {
+    const textRef = useRef<HTMLParagraphElement>(null);
+
+    useEffect(() => {
+        if (textRef.current) {
+            gsap.to(textRef.current, {
+                y: -12,
+                repeat: -1,
+                yoyo: true,
+                duration: 0.8,
+                ease: "power1.inOut",
+            });
+        }
+    }, []);
+
     return (
         <div
             style={{
@@ -16,27 +33,45 @@ export default function Loading() {
             aria-busy="true"
             aria-label="Loading"
         >
-            <div
+            <motion.div
                 style={{
                     width: 64,
                     height: 64,
                     border: "8px solid #e0e0e0",
                     borderTop: "8px solid #333",
                     borderRadius: "50%",
-                    animation: "spin 1s linear infinite",
+                    boxShadow: "0 2px 16px rgba(0,0,0,0.08)",
+                }}
+                animate={{ rotate: 360 }}
+                transition={{
+                    repeat: Infinity,
+                    duration: 1,
+                    ease: "linear",
                 }}
             />
-            <p style={{ marginTop: 24, fontSize: 20, color: "#333" }}>
-                Loading assets...
-            </p>
-            <style>
-                {`
-          @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-          }
-        `}
-            </style>
+            <motion.p
+                ref={textRef}
+                style={{
+                    marginTop: 32,
+                    fontSize: 22,
+                    color: "#333",
+                    fontWeight: 500,
+                    letterSpacing: "0.04em",
+                    textShadow: "0 1px 8px rgba(0,0,0,0.08)",
+                }}
+                initial={{ opacity: 0.5, scale: 0.98 }}
+                animate={{
+                    opacity: [0.5, 1, 0.5],
+                    scale: [0.98, 1.04, 0.98],
+                }}
+                transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                }}
+            >
+                Loading...
+            </motion.p>
         </div>
     );
 }
