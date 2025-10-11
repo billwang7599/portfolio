@@ -7,7 +7,7 @@ const bgImage = "/assets/china-bg.webp";
 const cloudImage1 = "/assets/clouds1.webp";
 const fgImage = "/assets/china-fg.webp";
 
-export function Hero() {
+export default function Hero() {
     const containerRef = useRef<HTMLDivElement>(null);
     const fgRef = useRef<HTMLDivElement>(null);
     const bgRef = useRef<HTMLDivElement>(null);

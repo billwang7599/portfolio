@@ -1,6 +1,6 @@
 "use client";
-import { Hero } from "../pages/hero";
-import { Experience } from "../pages/experience";
+import Hero from "../pages/hero";
+import Experience from "../pages/experience";
 import Projects from "../pages/projects";
 import Contact from "../pages/contact";
 import { Navbar, NavItems } from "../components/navbar";

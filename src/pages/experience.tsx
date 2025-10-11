@@ -8,7 +8,7 @@ type Experience = {
     duration: string;
 };
 
-export function Experience() {
+export default function Experience() {
     const headingRef = useRef<HTMLHeadingElement>(null);
     const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
