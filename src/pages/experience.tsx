@@ -101,15 +101,18 @@ export default function Experience() {
                         }}
                         className="relative z-10 bg-white rounded-xl shadow-xl p-8 w-full max-w-xl hover:scale-105 transition-transform duration-300"
                     >
-                        <h3 className="text-3xl font-thin text-gray-700 mb-2">
-                            {experience.title}
-                        </h3>
-                        <p className="text-xl text-gray-600 font-bold">
+                        <h3 className="text-3xl font-bold text-gray-700 mb-2">
                             {experience.company}
-                        </p>
-                        <p className="text-md text-gray-500 mt-1">
-                            {experience.duration}
-                        </p>
+                        </h3>
+                        <div className="flex items-center justify-between text-xl text-gray-600 w-full">
+                            <span className="font-light">
+                                {experience.title}
+                            </span>
+                            <span className="text-md text-gray-500 font-light">
+                                {experience.duration}
+                            </span>
+                        </div>
+                        <p className="text-md text-gray-500 mt-1"></p>
                     </div>
                 ))}
             </div>
