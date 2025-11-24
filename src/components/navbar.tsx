@@ -30,7 +30,9 @@ export const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                 )}
             >
                 <div className="flex items-center">
-                    <span className="ml-2 text-xl font-bold">BW</span>
+                    <span className="ml-2 text-lg font-semibold tracking-tight">
+                        BW
+                    </span>
                 </div>
                 {/* Desktop Nav */}
                 <div className="hidden md:flex items-center gap-4">
@@ -41,7 +43,7 @@ export const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                                 href={item.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-md font-bold px-3 py-1 rounded text-gray-600 hover:text-gray-300 transition"
+                                className="text-sm font-medium px-2 py-1 rounded text-gray-600 hover:text-gray-300 transition tracking-tight hover:cursor-pointer cursor-pointer"
                                 onClick={() => setMenuOpen(false)}
                             >
                                 {item.title}
@@ -49,7 +51,7 @@ export const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                         ) : (
                             <button
                                 key={item.title}
-                                className="text-md font-bold px-3 py-1 rounded text-gray-600 hover:text-gray-300 transition"
+                                className="text-sm font-medium px-2 py-1 rounded text-gray-600 hover:text-gray-300 transition tracking-tight cursor-pointer"
                                 onClick={() => handleNavClick(item)}
                                 type="button"
                             >
@@ -96,7 +98,7 @@ export const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                                 href={item.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-xl font-semibold mb-6 px-6 py-3 rounded hover:bg-gray-100 transition"
+                                className="text-base font-medium mb-4 px-4 py-2 rounded hover:bg-gray-100 transition tracking-tight cursor-pointer"
                                 onClick={() => setMenuOpen(false)}
                             >
                                 {item.title}
@@ -104,7 +106,7 @@ export const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                         ) : (
                             <button
                                 key={item.title}
-                                className="text-xl font-semibold mb-6 px-6 py-3 rounded hover:bg-gray-100 transition"
+                                className="text-base font-medium mb-4 px-4 py-2 rounded hover:bg-gray-100 transition tracking-tight cursor-pointer"
                                 onClick={() => handleNavClick(item)}
                                 type="button"
                             >
@@ -113,7 +115,7 @@ export const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                         ),
                     )}
                     <button
-                        className="text-gray-600 text-lg mt-4"
+                        className="text-gray-600 text-base mt-2"
                         onClick={() => setMenuOpen(false)}
                         type="button"
                     >

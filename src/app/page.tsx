@@ -28,7 +28,7 @@ export default function Home() {
         <>
             {loading && <Loading />}
             <div
-                className="flex flex-col bg-bg text-secondary overflow-hidden"
+                className="flex flex-col bg-bg text-secondary overflow-hidden text-[15px] font-normal"
                 ref={containerRef}
                 style={{ filter: loading ? "blur(2px)" : "none" }}
             >
@@ -47,7 +47,7 @@ export default function Home() {
                 </div>
                 <Scrollbar containerRef={containerRef} />
             </div>
-            <footer className="w-full py-6 flex flex-col items-center border-t border-gray-200 bg-white bg-opacity-80 text-gray-500 text-sm">
+            <footer className="w-full py-4 flex flex-col items-center border-t border-gray-200 bg-white bg-opacity-80 text-gray-400 text-xs font-light tracking-tight">
                 <span>
                     &copy; {new Date().getFullYear()} Bill Wang. All rights
                     reserved.

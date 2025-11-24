@@ -157,10 +157,10 @@ export default function Hero({ setLoading }: HeroProps) {
                     className="flex flex-col relative z-10 items-end mt-[18vh] w-full p-8"
                     ref={fgRef}
                 >
-                    <h1 className="w-full mb-4 tracking-wide text-7xl lg:text-8xl font-extrabold text-black drop-shadow text-center leading-none">
+                    <h1 className="w-full mb-3 tracking-wide text-6xl lg:text-7xl font-extrabold text-black text-center leading-tight">
                         Bill Wang
                     </h1>
-                    <h2 className="w-full mb-4 tracking-wide text-3xl lg:text-4xl font-light text-black drop-shadow text-center leading-none">
+                    <h2 className="w-full mb-3 tracking-wide text-xl lg:text-2xl font-light text-gray-700 text-center leading-tight">
                         王泽涛
                     </h2>
                 </div>

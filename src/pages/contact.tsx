@@ -21,7 +21,7 @@ export default function Contact() {
     }, []);
 
     return (
-        <div className="min-h-screen flex flex-col md:flex-row items-center justify-center px-8 py-16">
+        <div className="min-h-screen flex flex-col md:flex-row items-center justify-center px-4 py-10">
             {/* Left: Spinning Jade Pendant */}
             <div className="flex-1 flex items-center justify-center mb-8 md:mb-0 relative aspect-square w-full">
                 <Image
@@ -35,15 +35,15 @@ export default function Contact() {
             </div>
             {/* Right: Contact Buttons */}
             <div className="flex-1">
-                <div className="flex flex-col items-center md:items-start gap-6 w-fit bg-white bg-opacity-80 rounded-xl shadow-lg p-16 border border-gray-200">
-                    <h2 className="text-5xl font-extrabold text-gray-800 drop-shadow">
+                <div className="flex flex-col items-center md:items-start gap-4 w-fit bg-white bg-opacity-80 rounded-lg shadow-md p-8 border border-gray-200">
+                    <h2 className="text-3xl font-bold text-gray-800">
                         Contact Me
                     </h2>
-                    <p className="text-gray-500 text-lg font-light">
+                    <p className="text-gray-500 text-base font-normal">
                         Thanks for stopping by! I’m always open to new
                         opportunities and connections.
                     </p>
-                    <div className="flex flex-row gap-8">
+                    <div className="flex flex-row gap-4">
                         <SocialButton
                             icon={FaEnvelope}
                             label="Email"
@@ -72,7 +72,7 @@ export default function Contact() {
                             icon={ImBlogger}
                             label="Blog"
                             href="https://blog.billwang.dev"
-                            animationDelay={0.8}
+                            animationDelay={0.95}
                             external={true}
                         />
                     </div>
@@ -81,14 +81,14 @@ export default function Contact() {
             {/* Custom slow spin animation */}
             <style>
                 {`
-                @keyframes spin {
-                    0% { transform: rotate(0deg); }
-                    100% { transform: rotate(360deg); }
-                }
-                .animate-spin-slow {
-                    animation: spin 30s linear infinite;
-                }
-                `}
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            .animate-spin-slow {
+                animation: spin 30s linear infinite;
+            }
+            `}
             </style>
         </div>
     );
@@ -137,10 +137,10 @@ function SocialButton({
             href={href}
             target={external ? "_blank" : undefined}
             rel={external ? "noopener noreferrer" : undefined}
-            className={`group ${isFullWidth ? "w-full" : ""} flex items-center gap-3 hover:px-6 py-3 rounded-lg text-gray-700 hover:text-white hover:bg-gray-700 hover:shadow-lg transition-all duration-[0.7s]`}
+            className={`group ${isFullWidth ? "w-full" : ""} flex items-center gap-2 hover:px-4 py-2 rounded-md text-gray-700 hover:text-white hover:bg-gray-700 hover:shadow-md transition-all duration-[0.7s] text-base`}
         >
-            <Icon className="w-8 h-8" />
-            <span className="max-w-0 text-lg overflow-hidden group-hover:max-w-[100px] whitespace-nowrap transition-all duration-[0.7s]">
+            <Icon className="w-6 h-6" />
+            <span className="max-w-0 text-base overflow-hidden group-hover:max-w-[100px] whitespace-nowrap transition-all duration-[0.7s] font-normal">
                 {label}
             </span>
         </a>

@@ -6,6 +6,7 @@ type Experience = {
     title: string;
     company: string;
     duration: string;
+    team: string;
 };
 
 export default function Experience() {
@@ -15,23 +16,33 @@ export default function Experience() {
     const experiences: Experience[] = [
         {
             title: "Software Engineer",
+            company: "Tesla",
+            duration: "Jan 2026 - April 2026",
+            team: "Fleetnet",
+        },
+        {
+            title: "Software Engineer",
             company: "Rocket Mortgage",
             duration: "May 2025 - Aug 2025",
+            team: "AI Platforms",
         },
         {
             title: "Full Stack Developer",
             company: "AllMind AI",
             duration: "Sept 2024 - Dec 2024",
+            team: "Product",
         },
         {
             title: "Software Engineer",
             company: "Huawei Technologies",
             duration: "Feb 2023 - May 2023",
+            team: "Internal Tools",
         },
         {
             title: "Software Engineer",
             company: "AdaptivePulse",
             duration: "May 2022 - Aug 2022",
+            team: "Product",
         },
     ];
 
@@ -99,20 +110,24 @@ export default function Experience() {
                         ref={(el) => {
                             cardsRef.current[index] = el;
                         }}
-                        className="relative z-10 bg-white rounded-xl shadow-xl p-8 w-full max-w-xl hover:scale-105 transition-transform duration-300"
+                        className="relative z-10 bg-white rounded-lg shadow-md p-5 w-full max-w-md hover:scale-105 transition-transform duration-300"
                     >
-                        <h3 className="text-3xl font-bold text-gray-700 mb-2">
-                            {experience.company}
-                        </h3>
-                        <div className="flex items-center justify-between text-xl text-gray-600 w-full">
-                            <span className="font-light">
+                        <div className="flex items-end justify-between mb-1">
+                            <h3 className="text-2xl font-semibold text-gray-700">
+                                {experience.company}
+                            </h3>
+                            <span className="text-base text-gray-500 font-light">
+                                {experience.team}
+                            </span>
+                        </div>
+                        <div className="flex items-center justify-between text-gray-600 w-full">
+                            <span className="text-lg font-normal">
                                 {experience.title}
                             </span>
-                            <span className="text-md text-gray-500 font-light">
+                            <span className="text-sm text-gray-400 font-light">
                                 {experience.duration}
                             </span>
                         </div>
-                        <p className="text-md text-gray-500 mt-1"></p>
                     </div>
                 ))}
             </div>
