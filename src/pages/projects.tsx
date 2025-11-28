@@ -47,6 +47,14 @@ export default function Projects() {
             github: "https://github.com/billwang7599/Zettle",
             image: "/projects/secondbrain.png",
         },
+        {
+            title: "Pong Game",
+            description:
+                "Simple Pong Game created in GoLang to learn about GoLang and networks",
+            github: "https://github.com/billwang7599/BillGame",
+            image: "/projects/golang.png",
+        },
+        ,
     ];
 
     const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
